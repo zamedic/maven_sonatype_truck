@@ -4,7 +4,7 @@ maintainer_email 'marc@marcarndt.com'
 license 'MIT'
 description 'Delivery truck for Java Maven to Sonatype Repo'
 long_description 'Builds a Java Project using maven and published the artifact to sonatype repository'
-version '0.1.0'
+version '1.0.0'
 
 depends 'coffee-truck'
 
