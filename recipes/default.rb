@@ -26,5 +26,5 @@ maven_settings "settings.profiles" do
           "gpg.executable" => "gpg2",
           "gpg.passphrase" => "#{secrets['gpgpass']}"
       }
-  }
+   }
 end
