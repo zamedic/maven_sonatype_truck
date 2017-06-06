@@ -8,14 +8,6 @@ include_recipe 'coffee-truck::default'
 
 secrets = get_project_secrets
 
-maven_settings "settings.servers" do
-  value "server" => {
-      "id" => "ossrh",
-      "username" => "zamedic",
-      "password" => "#{secrets['osspass']}"
-  }
-end
-
 maven_settings "settings.profiles" do
   value "profile" => {
       "id" => "ossrh",
@@ -27,4 +19,12 @@ maven_settings "settings.profiles" do
           "gpg.passphrase" => "#{secrets['gpgpass']}"
       }
    }
+end
+
+maven_settings "settings.servers" do
+  value "server" => {
+      "id" => "ossrh",
+      "username" => "zamedic",
+      "password" => "#{secrets['osspass']}"
+  }
 end
