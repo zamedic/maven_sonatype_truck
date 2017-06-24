@@ -8,6 +8,7 @@ include_recipe 'coffee-truck::default'
 
 secrets = get_project_secrets
 
+package 'gnupg2'
 maven_settings "settings.profiles" do
   value "profile" => {
       "id" => "ossrh",
