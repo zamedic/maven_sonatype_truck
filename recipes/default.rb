@@ -8,7 +8,6 @@ include_recipe 'coffee-truck::default'
 
 secrets = get_project_secrets
 
-package 'gnupg2'
 maven_settings "settings.profiles" do
   value "profile" => {
       "id" => "ossrh",
@@ -16,7 +15,7 @@ maven_settings "settings.profiles" do
          "activeByDefault" => "true"
       },
       "properties" => {
-          "gpg.executable" => "gpg2",
+          "gpg.executable" => "gpg",
           "gpg.passphrase" => "#{secrets['gpgpass']}"
       }
    }
