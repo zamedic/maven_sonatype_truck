@@ -10,7 +10,7 @@ file '/tmp/gpg.key' do
   sensitive true
 end
 
-execute 'gpg2 --import /tmp/gpg.key' do
+execute 'gpg --import /tmp/gpg.key' do
   returns [0,2]
 end
 
